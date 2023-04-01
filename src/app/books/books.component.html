@@ -1,0 +1,10 @@
+<input type="text" [(ngModel)]="displayInput">
+
+<h5> {{displayInput}} </h5>
+
+<ul *ngIf="isShowing">
+    <ng-container *ngFor="let singleBook of books; let i = index">
+
+        <app-book (bookEmitter)="addToCart($event)" [book]="singleBook"></app-book>
+    </ng-container>
+</ul>

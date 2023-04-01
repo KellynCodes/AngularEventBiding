@@ -1,0 +1,6 @@
+<li>
+    <img [src]="book.img" width="100" [alt]="book.name">
+    {{book.name}} by {{book.author}}
+    <h4> {{book.amount}} </h4>
+    <button (click)="addToCart()">Add to cart</button>
+</li>
